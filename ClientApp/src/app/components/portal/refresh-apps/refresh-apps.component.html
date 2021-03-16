@@ -1,0 +1,17 @@
+<form #myForm="ngForm" (ngSubmit)="submitForm()" novalidate>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Environment</label>
+        <select class="form-control" id="enviornment_name" [(ngModel)]="input.enviornment_name" name="enviornment_name">
+            <option value="0">Select Environments</option>
+            <option *ngFor="let environment of _environments" value="{{environment.environmentId}}">{{environment.environmentName}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Application</label>
+        <select class="form-control" id="application_name" [(ngModel)]="input.application_name" name="application_name">
+            <option value="0">Select Application</option>
+            <option *ngFor="let apps of _applications" value="{{apps.applicationId}}">{{apps.applicationName}}</option>
+        </select>
+    </div>    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
