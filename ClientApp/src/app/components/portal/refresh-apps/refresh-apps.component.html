@@ -1,7 +1,7 @@
 <form #myForm="ngForm" (ngSubmit)="submitForm()" novalidate>
     <div class="form-group">
         <label for="exampleFormControlSelect1">Environment</label>
-        <select class="form-control" id="enviornment_name" [(ngModel)]="input.enviornment_name" name="enviornment_name">
+        <select class="form-control" id="environment_name" [(ngModel)]="input.environment_name" name="environment_name">
             <option value="0">Select Environments</option>
             <option *ngFor="let environment of _environments" value="{{environment.environmentId}}">{{environment.environmentName}}</option>
         </select>

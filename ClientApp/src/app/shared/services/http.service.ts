@@ -18,6 +18,7 @@ export class HttpService {
 
   PostData(url: string, data: any) : Observable<any> {
     console.log(data);
+    console.log(this._baseUrl + url);
     return this.http.post<any>(this._baseUrl + url, data);
   }
 }

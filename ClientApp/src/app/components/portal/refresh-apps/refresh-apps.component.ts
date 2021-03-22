@@ -24,7 +24,7 @@ export class RefreshAppsComponent {
   }
 
   submitForm() {
-    this.httpService.PostData('RefreshApps/RefreshApp',this.input).subscribe(result => {
+    this.httpService.PostData('RefreshApps/RefreshApps',this.input).subscribe(result => {
       this._applications = result;
     });
   }
